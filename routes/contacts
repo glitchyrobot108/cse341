@@ -2,12 +2,7 @@ const express = require("express")
 const router = express.Router()
 const controller = require("../controllers/contacts")
 
-router.get("/", async (req, res) => {
-   res.json(await controller.getContacts()); // Send the result as a JSON response
-})
-
-router.get("/:id", async (req, res) => {
-    await res.send(controller.getContact(stringify(req.params.id)))
-})
+router.get("/", controller.getContacts)
+router.get("/:id", controller.getContact)
 
 module.exports = router

@@ -11,6 +11,7 @@ app.get("/", (req, res) => {
     res.send("Casey Owens")
 })
 app.use("/contacts", contactsRoute)
+app.use(express.json())
 
 app.listen(process.env.PORT)
 console.log("Web server running on port: " + process.env.PORT)
