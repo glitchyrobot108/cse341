@@ -3,15 +3,20 @@ require('dotenv').config()
 const connectDB = require("./db/connect")
 const app = express()
 
+//Connect MongoDB
 connectDB()
 
-const contactsRoute = require("./routes/contacts")
+//Middleware
+app.use(express.json())
 
+//Routs Handling
+app.use("/contacts", require("./routes/contacts"))
+
+//Initial base route
 app.get("/", (req, res) => {
     res.send("Casey Owens")
 })
-app.use("/contacts", contactsRoute)
-app.use(express.json())
 
+//Run server
 app.listen(process.env.PORT)
 console.log("Web server running on port: " + process.env.PORT)
