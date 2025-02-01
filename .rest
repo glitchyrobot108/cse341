@@ -1,7 +1,79 @@
-http://localhost:3000/contacts
+# Local Environment
+
+# GET all contacts
+GET http://localhost:3000/contacts
 ###
-http://localhost:3000/contacts/67909361d57e566bb2cfa80e
+
+# GET single contact
+GET http://localhost:3000/contacts/6795d25361efca98e3fd6776
 ###
-https://casey-cse341-24.onrender.com/contacts
+
+# POST create a new contact
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "favoriteColor": "blue",
+    "birthday": "1990-01-01"
+}
 ###
-https://casey-cse341-24.onrender.com/contacts/67909361d57e566bb2cfa80e
+
+# PUT update a contact
+PUT http://localhost:3000/contacts/6795d25361efca98e3fd6776
+Content-Type: application/json
+
+{
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "jane.doe@example.com",
+    "favoriteColor": "green",
+    "birthday": "1991-02-02"
+}
+###
+
+# DELETE a contact
+DELETE http://localhost:3000/contacts/6795d25361efca98e3fd6776
+###
+
+# Render Environment
+
+# GET all contacts
+GET https://casey-cse341-24.onrender.com/contacts
+###
+
+# GET single contact
+GET https://casey-cse341-24.onrender.com/contacts/6795d25361efca98e3fd6776
+###
+
+# POST create a new contact
+POST https://casey-cse341-24.onrender.com/contacts
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "favoriteColor": "blue",
+    "birthday": "1990-01-01"
+}
+###
+
+# PUT update a contact
+PUT https://casey-cse341-24.onrender.com/contacts/6795d25361efca98e3fd6776
+Content-Type: application/json
+
+{
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "jane.doe@example.com",
+    "favoriteColor": "green",
+    "birthday": "1991-02-02"
+}
+###
+
+# DELETE a contact
+DELETE https://casey-cse341-24.onrender.com/contacts/6795d25361efca98e3fd6776
+###
