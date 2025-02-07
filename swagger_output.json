@@ -5,22 +5,12 @@
     "description": "API Documentation",
     "version": "1.0.0"
   },
-  "host": "https://cse341-r34r.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
-    "/": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/movies/": {
       "get": {
         "description": "",

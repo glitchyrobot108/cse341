@@ -19,12 +19,7 @@ app.use(express.json())
 
 //Routs Handling
 app.use("/movies", require("./routes/movies"))
-.use("/api-docs", require("./routes/swagger"))
-
-//Initial base route
-app.get("/", (req, res) => {
-    res.send("Casey Owens")
-})
+.use(require("./routes/swagger"))
 
 //Run server
 app.listen(process.env.PORT)
