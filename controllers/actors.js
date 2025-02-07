@@ -15,7 +15,6 @@ async function createActor(req, res) {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             birthdate: req.body.birthdate,
-            birthdate: req.body.birthdate,
             country: req.body.country,
             stars_in: req.body.stars_in
         })
