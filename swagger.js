@@ -1,6 +1,6 @@
 const swaggerAutogen = require("swagger-autogen")();
 
-const host = "casey-cse341-24.onrender.com";
+const host = "https://cse341-r34r.onrender.com";
 const schemes = ["https"];
 
 const doc = {
