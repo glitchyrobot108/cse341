@@ -8,7 +8,7 @@ const actorSchema = new Schema({
     country: String,
     stars_in: Array
 },{versionKey: false}
-);
+)
  
 const Actor = mongoose.model('Actor', actorSchema)
  

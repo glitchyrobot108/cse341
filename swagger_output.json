@@ -5,10 +5,11 @@
     "description": "API Documentation",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341-r34r.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
     "/movies/": {

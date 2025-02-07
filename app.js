@@ -8,17 +8,18 @@ const corsOptions = {
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
     optionsSuccessStatus: 204
-};
+}
 
 //Connect MongoDB
 connectDB()
 
 //Middleware
 app.use(express.json())
-.use(cors(corsOptions));
+.use(cors(corsOptions))
 
 //Routs Handling
 app.use("/movies", require("./routes/movies"))
+.use(/actors/, require("./routes/actors"))
 .use(require("./routes/swagger"))
 
 //Run server

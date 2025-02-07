@@ -10,7 +10,7 @@ const movieSchema = new Schema({
     starring: Array,
     director: String
 },{versionKey: false}
-);
+)
  
 const Movie = mongoose.model('Movie', movieSchema)
  
