@@ -11,19 +11,21 @@ async function getActors(req, res) {
 
 async function createActor(req, res) {
     try {
+        const { firstName, lastName, birthdate, country, stars_in } = req.body;
+
         const Actor = await Actor.create({
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            birthdate: req.body.birthdate,
-            country: req.body.country,
-            stars_in: req.body.stars_in
-        })
-        res.status(201).json(Actor)
+            firstName,
+            lastName,
+            birthdate,
+            country,
+            stars_in
+        });
+        res.status(201).json(Actor);
     } catch (error) {
         if (error.name === "ValidationError") {
-            res.status(400).json({ message: error.message, errors: error.errors })
+            res.status(400).json({ message: error.message, errors: error.errors });
         } else {
-            res.status(500).json({ message: "Internal Server Error" })
+            res.status(500).json({ message: "Internal Server Error" });
         }
     }
 }
