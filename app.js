@@ -19,7 +19,7 @@ app.use(express.json())
 
 //Routs Handling
 app.use("/movies", require("./routes/movies"))
-.use("actors", require("./routes/actors"))
+.use("/actors", require("./routes/actors"))
 .use(require("./routes/swagger"))
 
 //Run server

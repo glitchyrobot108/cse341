@@ -71,7 +71,7 @@
         }
       }
     },
-    "actors/": {
+    "/actors/": {
       "get": {
         "description": "",
         "responses": {
