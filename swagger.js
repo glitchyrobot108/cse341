@@ -1,7 +1,7 @@
 const swaggerAutogen = require("swagger-autogen")()
 
-const host = "localhost:3000"
-const schemes = ["http"]
+const host = ["localhost:3000", ]
+const schemes = ["http", "https"]
 
 const doc = {
     info: {
