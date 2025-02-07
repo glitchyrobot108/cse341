@@ -6,7 +6,7 @@ const actorSchema = new Schema({
     lastName: String,
     birthdate: Date,
     country: String,
-    stars_in: Array
+    stars_in: String
 },{versionKey: false}
 )
  
