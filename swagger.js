@@ -5,7 +5,7 @@ const schemes = ["https"];
 
 const doc = {
     info: {
-        title: "My Contacts Swagger API",
+        title: "My Movies Swagger API",
         description: "API Documentation",
     },
     host: host,

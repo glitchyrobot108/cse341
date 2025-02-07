@@ -2,8 +2,6 @@ const express = require("express")
 require('dotenv').config()
 const connectDB = require("./db/connect")
 const app = express()
-const swaggerUi = require("swagger-ui-express");
-const swaggerFile = require("./swagger_output.json");
 const cors = require("cors")
 const corsOptions = {
     origin: "*", // Replace with your allowed origin
@@ -20,10 +18,8 @@ app.use(express.json())
 .use(cors(corsOptions));
 
 //Routs Handling
-app.use("/contacts", require("./routes/contacts"))
-
-//Swagger
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+app.use("/movies", require("./routes/movies"))
+.use("/api-docs", require("./routes/swagger"))
 
 //Initial base route
 app.get("/", (req, res) => {

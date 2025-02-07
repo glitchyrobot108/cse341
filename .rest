@@ -1,15 +1,15 @@
 # Local Environment
 
-# GET all contacts
-GET http://localhost:3000/contacts
+# GET all movies
+GET http://localhost:3000/movies
 ###
 
 # GET single contact
-GET http://localhost:3000/contacts/6795d25361efca98e3fd6776
+GET http://localhost:3000/movies/6795d25361efca98e3fd6776
 ###
 
 # POST create a new contact
-POST http://localhost:3000/contacts
+POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
@@ -22,7 +22,7 @@ Content-Type: application/json
 ###
 
 # PUT update a contact
-PUT http://localhost:3000/contacts/6795d25361efca98e3fd6776
+PUT http://localhost:3000/movies/6795d25361efca98e3fd6776
 Content-Type: application/json
 
 {
@@ -35,21 +35,21 @@ Content-Type: application/json
 ###
 
 # DELETE a contact
-DELETE http://localhost:3000/contacts/6795d25361efca98e3fd6776
+DELETE http://localhost:3000/movies/6795d25361efca98e3fd6776
 ###
 
 # Render Environment
 
-# GET all contacts
-GET https://casey-cse341-24.onrender.com/contacts
+# GET all movies
+GET https://casey-cse341-24.onrender.com/movies
 ###
 
 # GET single contact
-GET https://casey-cse341-24.onrender.com/contacts/6795d25361efca98e3fd6776
+GET https://casey-cse341-24.onrender.com/movies/6795d25361efca98e3fd6776
 ###
 
 # POST create a new contact
-POST https://casey-cse341-24.onrender.com/contacts
+POST https://casey-cse341-24.onrender.com/movies
 Content-Type: application/json
 
 {
@@ -62,7 +62,7 @@ Content-Type: application/json
 ###
 
 # PUT update a contact
-PUT https://casey-cse341-24.onrender.com/contacts/6795d25361efca98e3fd6776
+PUT https://casey-cse341-24.onrender.com/movies/6795d25361efca98e3fd6776
 Content-Type: application/json
 
 {
@@ -75,5 +75,5 @@ Content-Type: application/json
 ###
 
 # DELETE a contact
-DELETE https://casey-cse341-24.onrender.com/contacts/6795d25361efca98e3fd6776
+DELETE https://casey-cse341-24.onrender.com/movies/6795d25361efca98e3fd6776
 ###
