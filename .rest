@@ -1,79 +1,155 @@
-# Local Environment
+### Localhost Environment
 
-# GET all movies
+### Get all movies
 GET http://localhost:3000/movies
-###
 
-# GET single contact
-GET http://localhost:3000/movies/6795d25361efca98e3fd6776
-###
+### Get a movie by ID
+GET http://localhost:3000/movies/{{movieId}}
 
-# POST create a new contact
+### Get a movie by title
+GET http://localhost:3000/movies/title/{{movieTitle}}
+
+### Create a new movie
 POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "john.doe@example.com",
-    "favoriteColor": "blue",
-    "birthday": "1990-01-01"
+  "title": "Inception",
+  "releasedate": "2010-07-16",
+  "genre": "Sci-Fi",
+  "rating": 8.8,
+  "parentRating": "PG-13",
+  "actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+  "director": "Christopher Nolan"
 }
-###
 
-# PUT update a contact
-PUT http://localhost:3000/movies/6795d25361efca98e3fd6776
+### Update a movie by ID
+PUT http://localhost:3000/movies/{{movieId}}
 Content-Type: application/json
 
 {
-    "firstName": "Jane",
-    "lastName": "Doe",
-    "email": "jane.doe@example.com",
-    "favoriteColor": "green",
-    "birthday": "1991-02-02"
+  "title": "Inception",
+  "releasedate": "2010-07-16",
+  "genre": "Sci-Fi",
+  "rating": 8.8,
+  "parentRating": "PG-13",
+  "actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+  "director": "Christopher Nolan"
 }
-###
 
-# DELETE a contact
-DELETE http://localhost:3000/movies/6795d25361efca98e3fd6776
-###
+### Delete a movie by ID
+DELETE http://localhost:3000/movies/{{movieId}}
 
-# Render Environment
+### Get all actors
+GET http://localhost:3000/actors
 
-# GET all movies
-GET https://casey-cse341-24.onrender.com/movies
-###
+### Get an actor by ID
+GET http://localhost:3000/actors/{{actorId}}
 
-# GET single contact
-GET https://casey-cse341-24.onrender.com/movies/6795d25361efca98e3fd6776
-###
+### Get an actor by name
+GET http://localhost:3000/actors/name?firstName={{firstName}}&lastName={{lastName}}
 
-# POST create a new contact
-POST https://casey-cse341-24.onrender.com/movies
+### Create a new actor
+POST http://localhost:3000/actors
 Content-Type: application/json
 
 {
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "john.doe@example.com",
-    "favoriteColor": "blue",
-    "birthday": "1990-01-01"
+  "firstName": "Leonardo",
+  "lastName": "DiCaprio",
+  "birthdate": "1974-11-11",
+  "country": "USA",
+  "movies": ["Inception", "Titanic"]
 }
-###
 
-# PUT update a contact
-PUT https://casey-cse341-24.onrender.com/movies/6795d25361efca98e3fd6776
+### Update an actor by ID
+PUT http://localhost:3000/actors/{{actorId}}
 Content-Type: application/json
 
 {
-    "firstName": "Jane",
-    "lastName": "Doe",
-    "email": "jane.doe@example.com",
-    "favoriteColor": "green",
-    "birthday": "1991-02-02"
+  "firstName": "Leonardo",
+  "lastName": "DiCaprio",
+  "birthdate": "1974-11-11",
+  "country": "USA",
+  "movies": ["Inception", "Titanic"]
 }
-###
 
-# DELETE a contact
-DELETE https://casey-cse341-24.onrender.com/movies/6795d25361efca98e3fd6776
-###
+### Delete an actor by ID
+DELETE http://localhost:3000/actors/{{actorId}}
+
+### Render Environment
+
+### Get all movies
+GET https://cse341-r34r.onrender.com/movies
+
+### Get a movie by ID
+GET https://cse341-r34r.onrender.com/movies/{{movieId}}
+
+### Get a movie by title
+GET https://cse341-r34r.onrender.com/movies/title/{{movieTitle}}
+
+### Create a new movie
+POST https://cse341-r34r.onrender.com/movies
+Content-Type: application/json
+
+{
+  "title": "Inception",
+  "releasedate": "2010-07-16",
+  "genre": "Sci-Fi",
+  "rating": 8.8,
+  "parentRating": "PG-13",
+  "actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+  "director": "Christopher Nolan"
+}
+
+### Update a movie by ID
+PUT https://cse341-r34r.onrender.com/movies/{{movieId}}
+Content-Type: application/json
+
+{
+  "title": "Inception",
+  "releasedate": "2010-07-16",
+  "genre": "Sci-Fi",
+  "rating": 8.8,
+  "parentRating": "PG-13",
+  "actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+  "director": "Christopher Nolan"
+}
+
+### Delete a movie by ID
+DELETE https://cse341-r34r.onrender.com/movies/{{movieId}}
+
+### Get all actors
+GET https://cse341-r34r.onrender.com/actors
+
+### Get an actor by ID
+GET https://cse341-r34r.onrender.com/actors/{{actorId}}
+
+### Get an actor by name
+GET https://cse341-r34r.onrender.com/actors/name?firstName={{firstName}}&lastName={{lastName}}
+
+### Create a new actor
+POST https://cse341-r34r.onrender.com/actors
+Content-Type: application/json
+
+{
+  "firstName": "Leonardo",
+  "lastName": "DiCaprio",
+  "birthdate": "1974-11-11",
+  "country": "USA",
+  "movies": ["Inception", "Titanic"]
+}
+
+### Update an actor by ID
+PUT https://cse341-r34r.onrender.com/actors/{{actorId}}
+Content-Type: application/json
+
+{
+  "firstName": "Leonardo",
+  "lastName": "DiCaprio",
+  "birthdate": "1974-11-11",
+  "country": "USA",
+  "movies": ["Inception", "Titanic"]
+}
+
+### Delete an actor by ID
+DELETE https://cse341-r34r.onrender.com/actors/{{actorId}}
