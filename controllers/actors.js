@@ -21,12 +21,15 @@ async function getActorById(req, res) {
 async function getActorByName(req, res) {
     try {
         const actor = await Actor.find({
-            firstName: req.params.firstName,
-            lastName: req.params.lastName
-        })
-        res.json(actor)
+            firstName: { $regex: new RegExp(req.params.firstName, "i") },
+            lastName: { $regex: new RegExp(req.params.lastName, "i") }
+        });
+        if (!actor.length) {
+            return res.status(404).json({ message: "Actor not found" });
+        }
+        res.json(actor);
     } catch (error) {
-        res.status(500).json({ message: "Internal Server Error" })
+        res.status(500).json({ message: "Internal Server Error" });
     }
 }
 
@@ -53,7 +56,7 @@ async function createActor(req, res) {
 
 async function updateActor(req, res) {
     try {
-        const actor = await actor.findByIdAndUpdate(
+        const actor = await Actor.findByIdAndUpdate(
             req.params.id,
             {
                 firstName: req.body.firstName,
@@ -79,7 +82,7 @@ async function updateActor(req, res) {
 
 async function deleteActor(req, res) {
     try {
-        const actor = await actor.deleteOne({ _id: req.params.id });
+        const actor = await Actor.deleteOne({ _id: req.params.id });
         if (!actor.deletedCount) {
             return res.status(404).json({ message: "actor not found" });
         }

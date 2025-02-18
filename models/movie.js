@@ -3,11 +3,11 @@ const Schema = mongoose.Schema
  
 const movieSchema = new Schema({
     title: String,
-    releasedata: Date,
+    releasedate: Date,
     genre: String,
     rating: String,
     parentRating: String,
-    starring: Array,
+    actors: Array,
     director: String
 },{versionKey: false}
 )

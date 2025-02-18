@@ -20,9 +20,12 @@ async function getMovieById(req, res) {
 
 async function getMovieByTitle(req, res) {
     try {
-        const movie = await Movie.find({
-            title: req.params.title
+        const movie = await Movie.findOne({
+            title: { $regex: new RegExp(req.params.title, "i") }
         })
+        if (!movie) {
+            return res.status(404).json({ message: "Movie not found" });
+        }
         res.json(movie)
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error" })
@@ -33,7 +36,7 @@ async function createMovie(req, res) {
     try {
         const movie = await Movie.create({
             title: req.body.title,
-            releasedata: req.body.releasedata,
+            releasedate: req.body.releasedate,
             genre: req.body.genre,
             rating: req.body.rating,
             parentRating: req.body.parentRating,
@@ -55,11 +58,13 @@ async function updateMovie(req, res) {
         const movie = await Movie.findByIdAndUpdate(
             req.params.id,
             {
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
-                birthdate: req.body.birthdate,
-                country: req.body.country,
-                movies: req.body.movies
+                title: req.body.title,
+                releasedate: req.body.releasedate,
+                genre: req.body.genre,
+                rating: req.body.rating,
+                parentRating: req.body.parentRating,
+                actors: req.body.actors,
+                director: req.body.director
             },
             { new: true }
         );
