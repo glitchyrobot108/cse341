@@ -4,10 +4,10 @@
 GET http://localhost:3000/movies
 
 ### Get a movie by ID
-GET http://localhost:3000/movies/{{movieId}}
+GET http://localhost:3000/movies/67b43806e2cc30ee5c47c554
 
 ### Get a movie by title
-GET http://localhost:3000/movies/title/{{movieTitle}}
+GET http://localhost:3000/movies/title/Inception
 
 ### Create a new movie
 POST http://localhost:3000/movies
@@ -24,7 +24,7 @@ Content-Type: application/json
 }
 
 ### Update a movie by ID
-PUT http://localhost:3000/movies/{{movieId}}
+PUT http://localhost:3000/movies/67b4382fe2cc30ee5c47c557
 Content-Type: application/json
 
 {
@@ -38,16 +38,16 @@ Content-Type: application/json
 }
 
 ### Delete a movie by ID
-DELETE http://localhost:3000/movies/{{movieId}}
+DELETE http://localhost:3000/movies/67b4382fe2cc30ee5c47c557
 
 ### Get all actors
 GET http://localhost:3000/actors
 
 ### Get an actor by ID
-GET http://localhost:3000/actors/{{actorId}}
+GET http://localhost:3000/actors/67b439d1e8ac87f426e0af52
 
 ### Get an actor by name
-GET http://localhost:3000/actors/name?firstName={{firstName}}&lastName={{lastName}}
+GET http://localhost:3000/actors/name?firstName=Christian&lastName=Bale
 
 ### Create a new actor
 POST http://localhost:3000/actors
@@ -62,7 +62,7 @@ Content-Type: application/json
 }
 
 ### Update an actor by ID
-PUT http://localhost:3000/actors/{{actorId}}
+PUT http://localhost:3000/actors/67b439d1e8ac87f426e0af52
 Content-Type: application/json
 
 {
@@ -74,7 +74,7 @@ Content-Type: application/json
 }
 
 ### Delete an actor by ID
-DELETE http://localhost:3000/actors/{{actorId}}
+DELETE http://localhost:3000/actors/67b439d1e8ac87f426e0af52
 
 ### Render Environment
 
@@ -82,10 +82,10 @@ DELETE http://localhost:3000/actors/{{actorId}}
 GET https://cse341-r34r.onrender.com/movies
 
 ### Get a movie by ID
-GET https://cse341-r34r.onrender.com/movies/{{movieId}}
+GET https://cse341-r34r.onrender.com/movies/67b43806e2cc30ee5c47c554
 
 ### Get a movie by title
-GET https://cse341-r34r.onrender.com/movies/title/{{movieTitle}}
+GET https://cse341-r34r.onrender.com/movies/title/Inception
 
 ### Create a new movie
 POST https://cse341-r34r.onrender.com/movies
@@ -102,7 +102,7 @@ Content-Type: application/json
 }
 
 ### Update a movie by ID
-PUT https://cse341-r34r.onrender.com/movies/{{movieId}}
+PUT https://cse341-r34r.onrender.com/movies/67b4382fe2cc30ee5c47c557
 Content-Type: application/json
 
 {
@@ -116,16 +116,16 @@ Content-Type: application/json
 }
 
 ### Delete a movie by ID
-DELETE https://cse341-r34r.onrender.com/movies/{{movieId}}
+DELETE https://cse341-r34r.onrender.com/movies/67b4382fe2cc30ee5c47c557
 
 ### Get all actors
 GET https://cse341-r34r.onrender.com/actors
 
 ### Get an actor by ID
-GET https://cse341-r34r.onrender.com/actors/{{actorId}}
+GET https://cse341-r34r.onrender.com/actors/67b439d1e8ac87f426e0af52
 
 ### Get an actor by name
-GET https://cse341-r34r.onrender.com/actors/name?firstName={{firstName}}&lastName={{lastName}}
+GET https://cse341-r34r.onrender.com/actors/name?firstName=Christian&lastName=Bale
 
 ### Create a new actor
 POST https://cse341-r34r.onrender.com/actors
@@ -140,7 +140,7 @@ Content-Type: application/json
 }
 
 ### Update an actor by ID
-PUT https://cse341-r34r.onrender.com/actors/{{actorId}}
+PUT https://cse341-r34r.onrender.com/actors/67b439d1e8ac87f426e0af52
 Content-Type: application/json
 
 {
@@ -152,4 +152,4 @@ Content-Type: application/json
 }
 
 ### Delete an actor by ID
-DELETE https://cse341-r34r.onrender.com/actors/{{actorId}}
+DELETE https://cse341-r34r.onrender.com/actors/67b439d1e8ac87f426e0af52
