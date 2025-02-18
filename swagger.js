@@ -1,9 +1,9 @@
 const swaggerAutogen = require("swagger-autogen")()
 
-// const host = "cse341-r34r.onrender.com"
-// const schemes = ["https"]
-const host = "localhost:3000"
-const schemes = ["http"]
+const host = "cse341-r34r.onrender.com"
+const schemes = ["https"]
+// const host = "localhost:3000"
+// const schemes = ["http"]
 
 const doc = {
     info: {

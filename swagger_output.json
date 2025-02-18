@@ -5,10 +5,10 @@
     "description": "API Documentation",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341-r34r.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/movies/": {
@@ -363,37 +363,6 @@
           },
           "500": {
             "description": "Internal Server Error"
-          }
-        }
-      }
-    }
-  },
-  "components": {
-    "schemas": {
-      "Actor": {
-        "type": "object",
-        "properties": {
-          "_id": {
-            "type": "string"
-          },
-          "firstName": {
-            "type": "string"
-          },
-          "lastName": {
-            "type": "string"
-          },
-          "birthdate": {
-            "type": "string",
-            "format": "date"
-          },
-          "country": {
-            "type": "string"
-          },
-          "movies": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       }
